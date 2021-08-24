@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "9cbc054b-e377-4fb2-bce3-70fb0d6f65e9",
+		"name": "Library Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin CURLS",
+			"item": [
+				{
+					"name": "http://localhost:8080/libManagement/admin/addBooks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyOTg1NTMxNSwiaWF0IjoxNjI5ODE5MzE1fQ.UxNXSP3LLxLPqehzUSjdcAKbPNjYpcuwkYHAaJk76Wc",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n\"name\":\"dictionary\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/libManagement/admin/addBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libManagement",
+								"admin",
+								"addBooks"
+							]
+						},
+						"description": "API to Add books to Library"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/libManagement/admin/viewBooks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyOTg1NTMxNSwiaWF0IjoxNjI5ODE5MzE1fQ.UxNXSP3LLxLPqehzUSjdcAKbPNjYpcuwkYHAaJk76Wc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/libManagement/admin/viewBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libManagement",
+								"admin",
+								"viewBooks"
+							]
+						},
+						"description": "ADMIN URL to get all books in library"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/libManagement/admin/removeBook",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyOTg1NTMxNSwiaWF0IjoxNjI5ODE5MzE1fQ.UxNXSP3LLxLPqehzUSjdcAKbPNjYpcuwkYHAaJk76Wc",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/libManagement/admin/removeBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libManagement",
+								"admin",
+								"removeBook"
+							]
+						},
+						"description": "API to remove Book From library"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User CURLS",
+			"item": [
+				{
+					"name": "http://localhost:8080/libManagement/user/issuedBooks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjI5ODU2MDk1LCJpYXQiOjE2Mjk4MjAwOTV9.dY6-2H5IViByl1UEaW3UD3QgmAygy7p8_ZsuFHh7ahY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/libManagement/user/issuedBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libManagement",
+								"user",
+								"issuedBooks"
+							]
+						},
+						"description": "View Book issued by user "
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/libManagement/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"user\",\r\n    \"password\":\"user\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/libManagement/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libManagement",
+						"authenticate"
+					]
+				},
+				"description": "Authentication API for user\r\nAdd token in header request for further requests"
+			},
+			"response": []
+		}
+	]
+}
