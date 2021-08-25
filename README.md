@@ -5,7 +5,7 @@ Postman CURLS attached
 
 SQL books Table
 id --> Primary Key , 
-issued_by --> id of the user who has issued the book , 
+issued_by --> id of the user who has issued the book (-1 if not issued) , 
 name --> name of the user ,
 
 
